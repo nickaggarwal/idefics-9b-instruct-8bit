@@ -5,7 +5,7 @@ from transformers import IdeficsForVisionText2Text, AutoProcessor
 
 class InferlessPythonModel:
 	def initialize(self):
-		checkpoint = "HuggingFaceM4/idefics-9b-instruct"
+		checkpoint = "HuggingFaceM4/idefics-80b-instruct"
 		self.model = IdeficsForVisionText2Text.from_pretrained(checkpoint, load_in_8bit=True, device_map="auto")
 		self.processor = AutoProcessor.from_pretrained(checkpoint)
 
